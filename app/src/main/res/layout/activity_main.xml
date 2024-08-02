@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".activity.MainActivity">
+
+    <ImageButton
+        android:id="@+id/img_back"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_5ssp"
+        android:layout_marginTop="@dimen/_5ssp"
+        android:background="@drawable/background_back_button"
+        android:contentDescription="TODO"
+        android:src="@drawable/icon_back"
+        app:layout_constraintBottom_toTopOf="@id/name_song"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/nav_up_down"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:background="@drawable/background_back_button"
+        android:src="@drawable/icon_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/name_song"
+        app:layout_constraintTop_toTopOf="@id/name_song" />
+
+    <TextView
+        android:id="@+id/name_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10ssp"
+        android:layout_marginTop="@dimen/_26ssp"
+        android:text="Name Song"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_23ssp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_depeche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5ssp"
+        android:text="Depeche Mode"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_song" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/process_song"
+        app:layout_constraintTop_toBottomOf="@+id/tv_depeche"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/ctnHeader">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_cd"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_270sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/bg_dark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+           />
+
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="142dp"
+            android:background="@drawable/background_back_button"
+            android:backgroundTint="@color/primary"
+            android:contentDescription="TODO"
+            android:src="@drawable/icon_next"
+            app:layout_constraintLeft_toRightOf="@id/btn_play_pause"
+            app:layout_constraintRight_toRightOf="@id/img_cd"
+            app:layout_constraintTop_toTopOf="@id/img_cd" />
+
+        <ImageButton
+            android:id="@+id/btn_previous"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@drawable/background_back_button"
+            android:backgroundTint="@color/primary"
+            android:contentDescription="TODO"
+            android:src="@drawable/icon_previous"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@id/img_cd"
+            app:layout_constraintLeft_toLeftOf="@id/img_cd"
+            app:layout_constraintTop_toTopOf="@id/img_cd" />
+
+        <ImageButton
+            android:id="@+id/btn_play_pause"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginLeft="47dp"
+            android:background="@drawable/background_back_button"
+            android:backgroundTint="@color/primary"
+            android:contentDescription="TODO"
+            android:src="@drawable/icon_play"
+            app:layout_constraintBottom_toBottomOf="@id/img_cd"
+            app:layout_constraintLeft_toRightOf="@id/btn_previous"
+            app:layout_constraintTop_toTopOf="@id/img_cd" />
+
+        <ImageView
+            android:id="@+id/btn_share"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="138dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/icon_share"
+            app:layout_constraintBottom_toBottomOf="@id/img_cd"
+            app:layout_constraintEnd_toEndOf="@id/img_cd"
+            app:layout_constraintLeft_toRightOf="@id/btn_notice" />
+
+        <ImageView
+            android:id="@+id/btn_notice"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_115sdp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/icon_notice"
+            app:layout_constraintBottom_toBottomOf="@id/img_cd"
+            app:layout_constraintStart_toStartOf="@id/img_cd" />
+
+        <ImageButton
+            android:id="@+id/btn_back_10s"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginBottom="28dp"
+            android:background="@color/white"
+            android:contentDescription="TODO"
+            android:src="@drawable/back_10s"
+            android:layout_marginTop="@dimen/_68sdp"
+            app:layout_constraintTop_toBottomOf="@id/btn_previous"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_next_10s"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginBottom="28dp"
+            android:background="@color/white"
+            android:contentDescription="TODO"
+            android:src="@drawable/next_10s"
+            android:layout_marginTop="@dimen/_68sdp"
+            app:layout_constraintTop_toBottomOf="@id/btn_previous"
+            app:layout_constraintLeft_toRightOf="@id/btn_back_10s"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_renew"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="28dp"
+            android:background="@color/white"
+            android:contentDescription="TODO"
+            android:src="@drawable/icon_renew"
+            android:layout_marginTop="@dimen/_68sdp"
+            app:layout_constraintTop_toBottomOf="@id/btn_next"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctnDemo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ctnHeader"
+        >
+        <com.example.testrun.utils.WaveformSeekBar
+            android:id="@+id/process_song"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="@dimen/_130sdp"
+            app:layout_constraintLeft_toRightOf="@id/tv_start_song"
+            app:layout_constraintRight_toLeftOf="@id/tv_end_song"
+            app:layout_constraintTop_toTopOf="parent"
+            android:max="100"
+            android:thumb="@android:color/transparent"
+            />
+
+        <TextView
+            android:id="@+id/tv_start_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="20dp"
+            android:text="00:00"
+            android:textStyle="bold"
+            app:layout_constraintRight_toLeftOf="@id/process_song"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_end_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="00:00"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/process_song"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_more_depeche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="More From Depeche Mode"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/process_song"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_song_play"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_more_depeche"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

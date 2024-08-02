@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_150sdp"
+    android:padding="5dp"
+    android:background="@drawable/bg_notification">
+
+    <ImageView
+        android:id="@+id/img_notification"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/music_note"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/tv_title_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/img_notification"
+        android:layout_alignTop="@id/img_notification" />
+
+    <TextView
+        android:id="@+id/tv_body_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body"
+        android:textSize="@dimen/_16ssp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_below="@id/tv_title_notification"
+        android:layout_alignStart="@id/tv_title_notification" />
+
+    <ImageView
+        android:id="@+id/btn_play_pause_notification"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/icon_play"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_75sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/btn_previous_notification"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/icon_previous"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_toStartOf="@id/btn_play_pause_notification"
+        android:layout_alignTop="@id/btn_play_pause_notification" />
+
+    <ImageView
+        android:id="@+id/btn_next_notification"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/icon_next"
+        android:layout_alignTop="@id/btn_play_pause_notification"
+        android:layout_alignParentEnd="true"
+        />
+
+</RelativeLayout>
